@@ -1,49 +1,208 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-    font-family:"Poppins", sans-serif;
-    color:white;
-    border:1px solid white;
-    font-size:15px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    /* border: 1px solid white; */
+    font-size: 15px;
+    border-radius: 1em;
 }
-body{
+
+body {
     background-color: #060C1A;
 }
 
 
-.navbar{
-    display:grid;
-    grid-template-columns: 1fr 3fr; 
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    min-width:300px;
 }
-.nav-cont1,.nav-cont2{
-    display:flex;
+
+.nav-cont1,
+.nav-cont2 {
+    display: flex;
     flex-direction: row;
     align-items: center;
-    padding:5px;
-    gap:10px;
+    padding: 5px;
+    gap: 10px;
 }
-.nav-cont1 img,p{
-    height:50%;
+
+.nav-cont1 img,
+.nav-cont1 p {
+    height: 50%;
 }
-.nav-cont1 p{
+
+.nav-cont1 p {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.nav-cont2 input{
+
+.nav-cont2 .parent {
+    width: 50%;
     background-color: #131b2c;
-    border-radius:200px;
-    width:50%;
-    padding:10px;
-    border:none;
+    border-radius: 100px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-cont2 .parent input {
+    background: transparent;
+    width: 100%;
+    border: none;
     outline: none;
 }
-.nav-cont2 #search{
-    background-color:#742bec;
-    padding:8px 20px;
+
+.nav-cont2 .parent i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.nav-cont2 #search {
+    background-color: #742bec;
+    padding: 8px 20px;
     border-radius: 8px;
-    cursor:pointer;  
+    cursor: pointer;
     user-select: none;
 }
 
+.main-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    margin: 20px auto;
+    width: 80%;
+    gap: 1%;
+    min-width: 300px;
+}
+
+
+.content1 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 5%;
+}
+
+.content2 {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+    gap: 5%;
+}
+
+.content1>div,
+.content2>div {
+    width: 95%;
+    margin: 10px auto;
+    background-color: #0e1421;
+}
+
+
+.basic-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.basic-details>div {
+    margin: 1%;
+}
+
+.basic-details img {
+    width: 100%;
+}
+
+.date-temp>p,
+.weather-details>p {
+    font-size: 35px;
+}
+
+.date-temp>span,
+.weather-details>span {
+    font-size: 12px;
+}
+
+
+.other-details {
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+}
+
+.other-details>div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1%;
+}
+
+.other-details .astro {
+    background-color: #14203A;
+    padding: 5%;
+}
+
+.astro p {
+    color: #676b73;
+}
+
+.astro h1 {
+    font-size: 30px;
+}
+
+
+
+.todays-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3%;
+    padding: 2%;
+    background-image: radial-gradient(#162850, #121A2D);
+    justify-content: center;
+    
+}
+
+.todays-highlights div {
+    background-color: #0e1421;
+    padding: 5%;
+}
+
+.todays-highlights h1 {
+    text-align: center;
+    font-size: 25px;
+    margin:20px 0 0 0;
+}
+
+.tips {
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+}
+
+@media screen and (max-width:650px) {
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        width: 100%;
+        gap: 1%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-cont1 p {
+        font-size:20px;
+    }
+}

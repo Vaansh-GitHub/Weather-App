@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
 
     </style>
@@ -18,8 +21,82 @@
             <p id="location">Dhaka,Bangladesh</p>
         </div>
         <div class="nav-cont2">
-            <input type="text" placeholder="Search City..." id="input_field">
+            <div class="parent">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search City..." id="input_field">
+            </div>
             <div id="search">Search</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="content1">
+            <div class="basic-details">
+                <div>
+                    <div class="date date-temp">
+                        <p>Monday</p>
+                        <span>24 Dec,2023</span>
+                    </div>
+                    <div class="temperature  date-temp">
+                        <p>26&deg;C</p>
+                        <span>High: 27 Low: 10</span>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="./311.webp" alt="" id="weather-image">
+                    <div class="weather-details">
+                        <p>Cloudy</p>
+                        <span>Feels Like 26</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="other-details">
+                <p>Today's Forecast</p>
+                <div>
+                    <div class="forecast-details">
+
+                    </div>
+                    <div class="astro">
+                        <div>
+                            <p>Sunrise</p>
+                            <h1>6:45</h1>
+                        </div>
+                        <div>
+                            <p>Sunset</p>
+                            <h1>17:30</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content2">
+            <div class="todays-highlights">
+                <div class="chance-of-rain">
+                    <p>Chance of Rain</p>
+                    <h1>84%</h1>
+                </div>
+                <div class="uv-index">
+                    <p>UV Index</p>
+                    <h1>5.5</h1>
+                </div>
+                <div class="humidity">
+                    <p>Humidity</p>
+                    <h1>84%</h1>
+                </div>
+                <div class="Visibility">
+                    <p>Visibility</p>
+                    <h1>100km</h1>
+                </div>
+            </div>
+            <div class="tips">
+                <p>Tips for Today!</p>
+                <div>
+                    <p>-> Dont Play Outside</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
