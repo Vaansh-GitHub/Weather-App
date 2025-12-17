@@ -5,7 +5,7 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
     color: white;
-    /* border: 1px solid white; */
+    border: 1px solid white;
     font-size: 15px;
     border-radius: 1em;
 }
@@ -18,7 +18,7 @@ body {
 .navbar {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    min-width:300px;
+    min-width: 300px;
 }
 
 .nav-cont1,
@@ -79,13 +79,14 @@ body {
     width: 80%;
     gap: 1%;
     min-width: 300px;
+
 }
 
 
 .content1 {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 5%;
+    display:flex;
+    flex-direction: column;
+    gap:5%;
 }
 
 .content2 {
@@ -120,7 +121,7 @@ body {
 
 .date-temp>p,
 .weather-details>p {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .date-temp>span,
@@ -145,8 +146,13 @@ body {
 .other-details .astro {
     background-color: #14203A;
     padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 }
+.astro div{
 
+}
 .astro p {
     color: #676b73;
 }
@@ -165,7 +171,7 @@ body {
     padding: 2%;
     background-image: radial-gradient(#162850, #121A2D);
     justify-content: center;
-    
+
 }
 
 .todays-highlights div {
@@ -176,7 +182,7 @@ body {
 .todays-highlights h1 {
     text-align: center;
     font-size: 25px;
-    margin:20px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .tips {
@@ -196,6 +202,57 @@ body {
     }
 }
 
+.forecast-details .forecast-details2 {
+    position:relative;
+    background-image: linear-gradient(to top right, #0E1421, #1D325F, #0E1421);
+    padding:1%;
+    margin:7%;
+}
+
+.forecast-details .forecast-details2>div {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+}
+
+.forecast-details .forecast-details2>div div:nth-child(2) {
+    font-size:1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forecast-details .forecast-details2 img{
+    position: absolute;
+    display: block;
+    top:-50%;
+    right:0;
+    width: 20%;
+}
+.forecast-details .forecast-details1 {
+    background-image: linear-gradient(to top right, #0E1421, #1D325F, #0E1421);
+    padding:1%;
+    margin:7%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.forecast-details .forecast-details1 div{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    background-color: rgba(97, 107, 194, 0.178)
+}
+.forecast-details .forecast-details1 div *{
+    text-align: center;
+}
+.forecast-details .forecast-details1 div img{
+    width:60%;
+}
+
+
+
 @media screen and (max-width:450px) {
     .navbar {
         display: flex;
@@ -203,6 +260,6 @@ body {
     }
 
     .nav-cont1 p {
-        font-size:20px;
+        font-size: 20px;
     }
 }
