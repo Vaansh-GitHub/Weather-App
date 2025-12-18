@@ -5,7 +5,7 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
     color: white;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     font-size: 15px;
     border-radius: 1em;
 }
@@ -153,12 +153,14 @@ body {
 .astro div{
 
 }
-.astro p {
+.astro p,.astro span {
     color: #676b73;
 }
 
 .astro h1 {
-    font-size: 30px;
+    font-size: 25px;
+    display: inline;
+    font-weight: normal;
 }
 
 
